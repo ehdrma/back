@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/text-to-speech": "^5.0.1",
+    "@google-cloud/translate": "^8.0.2",
     "axios": "^1.6.0",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
@@ -18,8 +20,10 @@
     "express-session": "^1.17.3",
     "mongoose": "^7.6.3",
     "node-cron": "^3.0.2",
+    "node-gtts": "^2.0.2",
     "passport": "^0.6.0",
     "passport-kakao": "^1.0.1",
-    "puppeteer": "^21.4.1"
+    "puppeteer": "^21.4.1",
+    "sox-audio": "^0.3.0"
   }
 }

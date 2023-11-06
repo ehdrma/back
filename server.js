@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs');
 const User = require('./models/User'); // User 모델 불러오기
 const Article = require('./models/Article'); // Article 모델 불러오기
 const scrapeNHKEasyNews = require('./scrapy'); // 스크래핑 함수 불러오기
+const translateArticles = require('./translate'); // 번역 함수 불러오기
 
 const app = express();
 const PORT = 5000;
@@ -53,6 +54,17 @@ app.get('/articles', async (req, res) => {
   }
 });
 
+// 번역 후, 데이터베이스 업데이트 엔드포인트
+app.get('/translateAndUpdate', async (req, res) => {
+  try {
+    await translateArticles(); // 번역 함수 호출
+    res.json({ message: 'Translation and update complete' });
+  } catch (error) {
+    console.error('Error while translating and updating articles:', error);
+    res.status(500).json({ error: '서버 오류입니다.' });
+  }
+});
+
 app.post('/api/signup', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -86,7 +98,7 @@ app.post('/api/login', async (req, res) => {
       return res.status(400).json({ error: '비밀번호가 올바르지 않습니다.' });
     }
 
-    res.json({ message: '로그인이 성공' });
+    res.json({ message: '로그인 성공' });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: '서버 오류' });

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "newnihon",
+  "private_key_id": "9f9e0e09c4dadc10ddeb96118a62fda73ba67985",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDqgSaiLra6N8j\nj8WUT3GDzafnbwXpnogS9yUQ9OIw6fkj6doBC7ZE0jwbqdz7o4xZuGY/IQvevrt4\nYabvJvnyYH4yQAtxFHQnxDZKIo3aI20BI++t0BiNUiBul7XhWYXsuQzY72l9xJpo\n20S0ecWZ9euePfMEY+MkCuTuZ1qXVbrPf2JXLh410W740XJsVXrPAsfEMQGG7lhb\n93ArnpFOcx/QJqpNbbOMfE8Bcg6xA9nxxgkXzwI9g9nu3sge9CGNGn2kf/qzZJ0c\nF1+iTftZlYbYrjfXd7V4GE6XKabafEhUmTmQrHYMrs7BJZWhWW0FsmSBi/Yb7kWJ\naka47i3nAgMBAAECggEAAldW8xhpZUl9s1m64KbrXKCJ0/GWowXOwAICs1y9a3Np\nPpOY6a6fsYbIdFZIesmpWhYkQbjIq74hf8kUq8OOIGck1hTBGPXIhq9I163pKkUx\nPom/tOyKq/+MZsuxlUQydN4pTVveqcQVSuWQwWNm82F8vmnPA2xEi/+wtI+PscQt\n8XXxQOU1gSEiPqrceG0khgDFeysC1GBUe/4rMtUaFvwWNBirkxbiJ65Ml4tJc5Yj\nwycYfOqKQ1K/63MG+NbE7AXvbqa4lNp80uy7Hareubdb17lgAIwR9yA03xHM4WOU\nSN9SXjZkrdMVzPRhGA4WCIEwoPf1uMrGrQ1a948wOQKBgQD797Vf8U7UDTMlmvDc\nuCaTIRCgpD/NHH7t9xfQrj1JMKHmq9a+tt6pKbXZWBdv28sU1iQWaEpLPjWliToY\nJ01vPRjnYy1AUql1DdsRyrriK0NwlnQPIAnJ2RHY8VlLO5Ll0RG4DXvXqopdRqt8\nZCq+2Ovnc9UCOJfH46RQVbPlWQKBgQDGy6N4ryzNcuXEq7QkHDunQ7/v+PyvoyIJ\nDr8hzUPRF9Q1b8QVq9jLoUDLIwAVU0Kq5UTOY+ELfI27GyxNoy6jCV+7K+PRiEPG\n6Fkg0thzsPyI7ag2IHjMYVKGpHO2si+gSQDs6DLiiusN1yIZ98Ak+ifI529zLhkg\nY99Ps94FPwKBgQDkUqw1u5n+B9QQQJ4AtJKoAm9p0kzKVgcjJiSbgjig6QPc3lxj\nR5zvV4+k2vGp+FbHk+DxuSGRm1bLoVVWa878fTXi/3kS75UFMEASmE3PAvtCu+OB\njTuxgBVvLA0JYnuT62cODJHrdWuaaJ6ewroFZNYoT0t3jsbjaIIOFgtFSQKBgBfk\nv/gwbd0fszgpPxScBBt9jCNGtPBTVjLqf9SLPFx0VcA6d8H3Dq6i6gvAYDEv+bJa\nriN0Y8ciqFJV2MRYGbHk3Ym8o7w6eZL9uEC2tudo3WGD1xTyYDKIfAfM2k+aKRlF\nzQOsgPkzoz7dna6rVX/cRU3ja0TXxJNdDakhwEy3AoGAPbOdmdxiQKFnHYk74Klb\nc57yRCuUL3U9pUsAjAyEW29jk379UlFYiybriW/3sc+64LOZ0UxJGpwxIuvJv9NT\nHraHmUv0pf7m1bUhIa5txZ9kaq5jOrAHPhgeNL2xt2UJLE0Pj1pOmh0ltID+/SWg\ntl3zjSGt3n0GMm4+1ObEaTc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "newnihontts@newnihon.iam.gserviceaccount.com",
+  "client_id": "114237054297884923519",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/newnihontts%40newnihon.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

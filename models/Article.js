@@ -1,4 +1,4 @@
-//기사 모델 정의
+// 기사 모델 정의
 const mongoose = require('mongoose');
 
 const articleSchema = new mongoose.Schema({
@@ -14,8 +14,17 @@ const articleSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  translatedTitle: {
+    type: String,
+    default: '',
+  },
+  translatedText: {
+    type: String,
+    default: '',
+  },
 });
 
 const Article = mongoose.model('Article', articleSchema);
 
 module.exports = Article;
+
