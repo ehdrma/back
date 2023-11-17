@@ -22,9 +22,32 @@ const articleSchema = new mongoose.Schema({
     type: String,
     default: '',
   },
+  quizzes: [{
+    question: {
+      type: String,
+      required: true,
+    },
+    options: [{
+      type: String,
+      required: true,
+    }],
+    correctAnswer: {
+      type: String,
+      required: true,
+    },
+  }],
+  words: [{
+    word: {
+      type: String,
+      required: true,
+    },
+    meaning: {
+      type: String,
+      required: true,
+    },
+  }],
 });
 
 const Article = mongoose.model('Article', articleSchema);
 
 module.exports = Article;
-

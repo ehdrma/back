@@ -19,7 +19,7 @@ async function scrapeNHKEasyNews() {
       articleElements.forEach((element) => {
         links.push(element.href);
       });
-      return links.slice(0, 5); // 링크 5개만 선택
+      return links.slice(0, 10); // 링크 10개만 선택
     });
 
     const articles = [];

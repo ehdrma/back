@@ -6,7 +6,7 @@ const User = require('./models/User'); // User 모델 불러오기
 const Article = require('./models/Article'); // Article 모델 불러오기
 const scrapeNHKEasyNews = require('./scrapy'); // 스크래핑 함수 불러오기
 const translateArticles = require('./translate'); // 번역 함수 불러오기
-
+const dotenv = require('dotenv'); // GPT .env 파일 로드
 const { TextToSpeechClient } = require('@google-cloud/text-to-speech');
 const { v4: uuidv4 } = require('uuid');
 const path = require('path');
@@ -20,9 +20,24 @@ const cors = require('cors');
 
 app.use(express.json());
 app.use(cors());
+dotenv.config();
 
 const keyFilename = path.join(__dirname, 'newnihon-tts.json');
 const client = new TextToSpeechClient({ keyFilename });
+
+app.use(express.static('public')); // 정적 파일 제공을 위한 미들웨어 설정
+
+// MongoDB 연결
+mongoose.connect('mongodb+srv://ehdrma99:fjqmffl99~@newnihon-cluster.tu3nh1c.mongodb.net/newnihon', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+});
 
 app.post('/text-to-speech', async (req, res) => {
   try {
@@ -49,20 +64,6 @@ app.post('/text-to-speech', async (req, res) => {
     console.error('Error while processing text to speech:', error);
     res.status(500).json({ error: '서버 오류입니다.' });
   }
-});
-
-app.use(express.static('public')); // 정적 파일 제공을 위한 미들웨어 설정
-
-// MongoDB 연결
-mongoose.connect('mongodb+srv://ehdrma99:fjqmffl99~@newnihon-cluster.tu3nh1c.mongodb.net/newnihon', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB');
 });
 
 // 스크래핑 후, 데이터베이스 저장 엔드포인트
@@ -138,7 +139,11 @@ app.post('/api/login', async (req, res) => {
       return res.status(400).json({ error: '비밀번호가 올바르지 않습니다.' });
     }
 
-    res.json({ message: '로그인 성공' });
+    // 로그인 성공 시 사용자 정보를 클라이언트에게 반환
+    res.json({
+      message: '로그인 성공',
+      userId: user._id,
+    });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: '서버 오류' });

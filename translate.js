@@ -49,3 +49,5 @@ async function translateArticles() {
     // mongoose.connection.close();
   }
 }
+
+module.exports = translateArticles;
