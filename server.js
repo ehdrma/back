@@ -68,6 +68,7 @@ app.post('/text-to-speech', async (req, res) => {
 
 // 스크래핑 후, 데이터베이스 저장 엔드포인트
 app.get('/scrape', async (req, res) => {
+  
   try {
     // 스크래핑 함수 호출
     const articles = await scrapeNHKEasyNews();
@@ -149,7 +150,7 @@ app.post('/api/login', async (req, res) => {
     res.status(500).json({ error: '서버 오류' });
   }
 });
-
+-
 app.use(cors());
 
 app.listen(PORT, () => {

@@ -35,6 +35,50 @@ const wordData = [
       word: '努力する',
       meaning: '노력하다',
     },
+    {
+      word: '安全',
+      meaning: '안전',
+    },
+    {
+      word: '考え方',
+      meaning: '사고방식',
+    },
+    {
+      word: '攻撃',
+      meaning: '공격',
+    },
+    {
+      word: 'なくす',
+      meaning: '없애다',
+    },
+    {
+      word: '話し合う',
+      meaning: '의논하다',
+    },
+    {
+      word: '決める',
+      meaning: '정하다',
+    },
+    {
+    word: '始まる',
+    meaning: '시작되다',
+  },
+  {
+    word: '使う',
+    meaning: '쓰다',
+  },
+  {
+    word: '作る',
+    meaning: '만들다',
+  },
+  {
+    word: '出席する',
+    meaning: '출석하다',
+  },
+  {
+    word: '帰国する',
+    meaning: '귀국하다',
+  },
   ],
   [
   {
